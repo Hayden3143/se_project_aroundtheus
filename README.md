@@ -33,3 +33,11 @@ The project utilizes HTML5 to provide the structure of the webpage and CSS3 for 
 **Plan on improving the project**
 
 Interactive option for the card title being set with a Nav link to the park or areas website/ additional images of the area.
+
+## Github Link
+
+https://hayden3143.github.io/se_project_aroundtheus/
+
+## Video Review
+
+https://drive.google.com/file/d/1o6JjN9B8O4crAxgh8BHQn8AXZ1KjPAXr/view?usp=sharing
