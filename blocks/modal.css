@@ -1,0 +1,110 @@
+.modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+  inset: 0;
+  color: #000;
+  padding: 0 19px;
+}
+
+.modal_opened {
+  display: flex;
+}
+
+.modal__close {
+  background: transparent url(../images/close.svg) no-repeat;
+  height: 40px;
+  width: 40px;
+  border: none;
+  position: absolute;
+  top: -45px;
+  right: -45px;
+  padding: 0px;
+}
+
+.modal__container {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 36px;
+  margin: auto;
+  position: relative;
+  max-width: 430px;
+  height: 330px;
+  box-sizing: border-box;
+}
+
+.modal__heading {
+  font-weight: 900;
+  line-height: 1.2;
+  font-size: 24px;
+  margin: 0 0 54px 0;
+  max-width: 330px;
+}
+
+.modal__form {
+  max-width: 360px;
+}
+
+.modal__form input {
+  width: 100%; /* Make inputs full width of the container */
+  height: 25px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: 14px;
+  padding: 0;
+}
+
+.modal__form input:last-of-type {
+  margin-bottom: 48px;
+}
+
+.modal__button {
+  background-color: #000;
+  color: #fff;
+  width: 360px;
+  height: 50px;
+  padding: 15px 124px;
+  border: none;
+  border-radius: 2px;
+}
+
+.modal__form input::placeholder {
+  color: #000;
+}
+
+@media screen and (max-width: 660px) {
+  .modal__close {
+    height: 26px;
+    width: 26px;
+    background-size: contain;
+    top: -45px;
+    right: 10px;
+    padding: 0px;
+  }
+
+  .modal__container {
+    max-width: 282px;
+    height: 322px;
+    padding: 25px 22px;
+  }
+
+  .modal__heading {
+    font-size: 18px;
+    line-height: 1.2;
+    max-width: 282px;
+    margin-bottom: 75px;
+  }
+
+  .modal__button {
+    width: 238px;
+    height: 46px;
+    padding: 15px 100px;
+  }
+  .modal__form input:last-of-type {
+    margin-bottom: 45px;
+  }
+}
