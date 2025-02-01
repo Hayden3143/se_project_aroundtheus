@@ -9,6 +9,7 @@ This project is a responsive web design that provides a seamless experience acro
 - Images
 - HTML
 - CSS
+- JavaScript
 
 **Intro**
 
@@ -29,6 +30,7 @@ The webpage features a profile section that displays a profile picture, name, ed
 **Technologies Used**
 
 The project utilizes HTML5 to provide the structure of the webpage and CSS3 for styling, including layout, colors, and responsive design. It employs CSS techniques such as Flexbox and Grid to create flexible and responsive layouts. Media queries are used to adjust styles for different screen sizes, ensuring a responsive design.
+Javascript used to provide funcationality to design through the use of propfile edit modal and refactor of Cards list
 
 **Plan on improving the project**
 
