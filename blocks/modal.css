@@ -1,15 +1,36 @@
 .modal {
+  display: flex;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  display: none;
-  inset: 0;
-  color: #000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 0 19px;
+  background-color: rgba(8, 8, 8, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease, visibility 1s ease;
 }
 
 .modal_opened {
-  display: flex;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal__container {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 36px;
+  margin: auto;
+  width: 430px;
+  height: 330px;
+  box-sizing: border-box;
 }
 
 .modal__close {
@@ -18,9 +39,12 @@
   width: 40px;
   border: none;
   position: absolute;
-  top: -45px;
-  right: -45px;
-  padding: 0px;
+  top: -40px;
+  right: -40px;
+  background-size: contain;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 .modal__close:hover {
@@ -28,15 +52,44 @@
   transition-duration: 1.3s;
 }
 
-.modal__container {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 36px;
+.modal__image {
+  width: 75vw;
+  height: 75vh;
+  object-fit: contain;
+  width: auto;
+  height: auto;
+}
+
+.modal__image-content {
+  max-width: 75vw;
+  max-height: 75vh;
   margin: auto;
-  position: relative;
-  max-width: 430px;
-  height: 330px;
-  box-sizing: border-box;
+}
+
+/*Override container for image modal*/
+.modal_type_image .modal__container {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  width: auto;
+  height: auto;
+}
+
+.modal_type_image .modal__close {
+  z-index: 2;
+  background-color: transparent;
+}
+.modal_type_image .modal__image-caption {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  background-color: transparent;
+  color: white;
+  font-size: 12px;
+  text-align: left;
+  min-width: 100%;
+  max-width: calc(75vw - 20px);
+  word-wrap: break-word;
 }
 
 .modal__title {

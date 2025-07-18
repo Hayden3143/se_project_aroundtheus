@@ -6,6 +6,7 @@
   max-width: 282px;
   min-height: 361px;
   overflow: hidden;
+  position: relative;
 }
 
 .card__image {
@@ -42,7 +43,38 @@
   cursor: pointer;
 }
 
+.card__like-button_active {
+  background-image: url(../images/Union.svg);
+}
+
 .card__like-button:hover {
   opacity: 50%;
   transition-duration: 1.3s;
+}
+
+.card__delete-button {
+  width: 18px;
+  height: 19px;
+  top: 18px;
+  right: 15px;
+  background: url(../images/Trash.svg) center no-repeat;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+}
+
+.card__delete-button:hover {
+  opacity: 50%;
+  transition-duration: 1.3s;
+}
+
+.card__popup__image {
+  max-width: 75vw;
+  max-height: 75vh;
+}
+
+.card__popup__caption {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #fff;
 }
