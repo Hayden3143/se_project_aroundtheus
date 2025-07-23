@@ -87,6 +87,7 @@ function handleProfileEditSubmit(e) {
   e.preventDefault();
   profileTitle.textContent = profileTitleInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
+  profileFormElement.reset();
   closePopup(profileEditModal);
 }
 
@@ -95,6 +96,7 @@ function handleAddCardFormSubmit(e) {
   const name = cardTitleInput.value;
   const link = cardUrlInput.value;
   renderCard({ name, link }, cardsWrap);
+  addCardFormElement.reset();
   closePopup(addCardModal);
 }
 
